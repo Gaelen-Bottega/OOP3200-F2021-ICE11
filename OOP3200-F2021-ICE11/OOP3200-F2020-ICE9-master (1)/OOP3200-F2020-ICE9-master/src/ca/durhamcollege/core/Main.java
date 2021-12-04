@@ -17,6 +17,7 @@ public class Main {
         // instantiates the collection container
         Vector<Vector2D> points = new Vector<Vector2D>();
 
+
         // builds a Vector of 4 points
         for (int i = 0; i < numOfPoints; i++)
         {
@@ -27,8 +28,7 @@ public class Main {
         {
             System.out.print("Enter the first point (x, y): ");
             prompt = keyboard.nextLine();
-            String[] values;
-            values = prompt.split(",");
+            String[] values = prompt.split(",");
             points.get(i).set(Float.parseFloat(values[0]), Float.parseFloat(values[1]));
 
             System.out.println("\n--------------------------------------------------------------" );
@@ -52,9 +52,6 @@ public class Main {
 
             points.add(randomVector2D);
         }
-
-
-
 
         System.out.printf("Magnitude of first random point is: %.3f \n", points.get(4).getMagnitude());
         System.out.printf("Magnitude of second random point is: %.3f \n",points.get(5).getMagnitude());
